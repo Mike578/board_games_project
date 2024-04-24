@@ -1,0 +1,3 @@
+Git Bash  / cmd / PowerShell:
+
+python -m flask --app appname run --port 8080 --debug
