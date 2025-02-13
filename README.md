@@ -6,14 +6,14 @@
 
 <b> 1.Business Use Case </b>
 
-  Understanding what are the main factors that may influence the chances of success when releasing a new board game on the market.
+  Understanding what are the main factors that may influence the chances of success when releasing a new board game on the market. <br>
   Qualified and funny board games satisfy customers and may enhance the maximization of profit for a publishing company or for an independent game creator.
 
 
 <b> 2. Goal </b>
-The goal of my project is to:
+The goal of my project is to:<br>
 • Analyze the various criteria that belong to the board-gaming industry
-•Identify the key factors of a good game rating, and create a prediction model
+• Identify the key factors of a good game rating, and create a prediction model
 
 
 <b> 3.Plan </b>
