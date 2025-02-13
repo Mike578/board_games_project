@@ -1,27 +1,37 @@
-# Board games project
+# 🎲 Board Games Project  
 
+![Board Games](https://github.com/user-attachments/assets/07c726bc-5713-4703-8d34-6cae5fc94827)  
 
-![image](https://github.com/user-attachments/assets/07c726bc-5713-4703-8d34-6cae5fc94827)
+## 📌 1. Business Use Case  
 
+Understanding the **key factors** that influence the success of a board game when launched on the market.  
+**High-quality and enjoyable** board games increase customer satisfaction and maximize profits for publishers or independent game creators.  
 
-<b> 1.Business Use Case </b>
+## 🎯 2. Project Goal  
 
-  Understanding what are the main factors that may influence the chances of success when releasing a new board game on the market. <br>
-  Qualified and funny board games satisfy customers and may enhance the maximization of profit for a publishing company or for an independent game creator.
+This project aims to:  
+✅ **Analyze** the various criteria within the board gaming industry  
+✅ **Identify** the key factors that contribute to a highly rated game  
+✅ **Develop a predictive model** based on these factors  
 
+## 🛠️ 3. Project Plan  
 
-<b> 2. Goal </b>
-The goal of my project is to:<br>
-• Analyze the various criteria that belong to the board-gaming industry
-• Identify the key factors of a good game rating, and create a prediction model
+1. 🔍 **Research** on the project topic  
+2. 📊 **Data collection**  
+3. 📝 **Project planning** on **Notion**  
+4. 🛢️ **Database creation** using **MySQL**  
+5. 📥 **Data insertion** and **Entity-Relationship Diagram (ERD) design**  
+6. 🏗️ **Data manipulation** using **SQL**  
+7. 📈 **Exploratory Data Analysis (EDA)** with **Python**  
+   - Data wrangling, normalization, and outlier removal  
+   - Data visualization  
+8. 🌍 **Data exposure via an API**  
+9. 🤖 **Machine Learning Model Selection**  
+   - Testing multiple models for board game rating prediction  
+   - Selecting the best-performing model for accurate predictions  
 
+---
 
-<b> 3.Plan </b>
-• Research about project topic
-• Data collection
-• Project Planning on Notion
-• Selection and creation of a database using MySQL
-• Adding data to databases and creating an Entity Relationship Diagram
-• Data manipulation through SQL use
-• Exploratory Data Analysis with Python (wrangling, normalizing, cleaning, removing outliers, visualizations)
-• Exposing data via API
+💡 **Technologies Used**: `Python`, `SQL`, `MySQL`, `Pandas`, `Matplotlib`, `Seaborn`, `Power BI`, `Flask API`, `Scikit-Learn`  
+📌 **Author**: *[@Mike578]*  
+📧 **Contact**: *[micelbaz@hotmail.fr]*  
