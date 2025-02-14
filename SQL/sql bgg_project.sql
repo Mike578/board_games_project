@@ -53,8 +53,7 @@ LIMIT 50;
 SELECT
 	g.bgg_id,
     g.name,
-    rd.average_rating,
-    rd.total_ratings,
+    rd.average_rating, rd.total_ratings,
     t.theme
 FROM bgg_project.games AS g
 LEFT JOIN bgg_project.ratings_distribution AS rd USING (bgg_id) 
@@ -62,14 +61,13 @@ LEFT JOIN bgg_project.themes_improved AS t USING (bgg_id)
 WHERE rd.total_ratings > 200
 AND g.year_published >= 1990 AND g.year_published < 2001
 ORDER BY rating desc
-LIMIT 20;
+LIMIT 10;
 
 -- Top 10 best games in the 2000's
 SELECT
 	g.bgg_id,
     g.name,
-    rd.average_rating,
-    rd.total_ratings,
+    rd.average_rating, rd.total_ratings,
     t.theme
 FROM bgg_project.games AS g
 LEFT JOIN bgg_project.ratings_distribution AS rd USING (bgg_id) 
@@ -77,7 +75,7 @@ LEFT JOIN bgg_project.themes_improved AS t USING (bgg_id)
 WHERE rd.total_ratings > 200
 AND g.year_published >= 2000 AND g.year_published < 2010
 ORDER BY rating desc
-LIMIT 20;
+LIMIT 10;
 
 
 
@@ -103,13 +101,14 @@ ORDER BY total_games DESC
 LIMIT 10;
 
 
--- Top 10 publishers
+-- Top 10 publishers between 190 and 2021
 SELECT 
     p.publisher,
     COUNT(g.bgg_id) AS total_games
-FROM bgg_project.games g
+FROM df_games_before_cleaning g
 LEFT JOIN bgg_project.publishers_improved p ON g.bgg_id = p.bgg_id
 WHERE p.publisher IS NOT NULL
+AND g.year_published >= 1980 AND g.year_published < 2022
 GROUP BY p.publisher
 ORDER BY total_games DESC
 LIMIT 10;
@@ -136,3 +135,21 @@ WHERE g.com_max_playtime IS NOT NULL
 GROUP BY c.category
 ORDER BY avg_max_playtime DESC
 LIMIT 10;
+
+
+-- comparing rating between various publishers
+SELECT *
+FROM bgg_project.df_games_before_cleaning
+
+LIMIT 50;
+
+-- Some publishers average rating
+SELECT 
+    p.publisher, 
+    ROUND(AVG(g.rating), 2) AS avg_rating,
+    SUM(rd.total_ratings)
+FROM bgg_project.games g
+JOIN bgg_project.publishers_improved p ON g.bgg_id = p.bgg_id
+JOIN bgg_project.ratings_distribution AS rd ON g.bgg_id = rd.bgg_id
+WHERE p.publisher IN ('Low-Exp Publisher', '3M', 'Asmodee', 'Ravensburger', 'Hasbro', 'Avalon Hill Games, Inc.')
+GROUP BY p.publisher;
