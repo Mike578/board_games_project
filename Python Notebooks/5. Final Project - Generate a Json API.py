@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 MAX_PAGE_SIZE = 100
 
+# -----------[CONNEXION TO THE DATABASE]--------------
+# Before tunning this file, first set the password in the terminal:
+# -->  export MYSQL_PASSWORD="you_password"
+
 
 
 # Récupérer le mot de passe MySQL depuis une variable d'environnement
